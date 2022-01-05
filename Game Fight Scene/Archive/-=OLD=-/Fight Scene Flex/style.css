@@ -1,0 +1,55 @@
+/* Memory Card Game - JavaScript Tutorial */
+/* https://www.youtube.com/watch?v=ZniVgo8U7ek */
+* {
+    padding: 0;
+    margin: 0;
+    /* reseting all elements to 0 */
+    box-sizing: border-box; 
+    /* any box and div section will be resized according to elements inside (for exemple image) */
+}
+
+html{
+    /* height: 100%; */
+
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url(images/Base.jpeg);
+
+    /* background-image: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/396750/e2c7db3746d412d9d25f276b6918931a6a34fe4e.jpg); */
+
+    /* background-size: cover; */}
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+section {
+    margin: auto;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid greenyellow;
+}
+
+.cell {
+    position: relative;
+    background: #fff;
+    border: 1px solid lightskyblue;
+    width: 20%;
+    height: 20%;
+
+}
+
+.images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2em;
+} */

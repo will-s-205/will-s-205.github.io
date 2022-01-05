@@ -1,0 +1,86 @@
+body{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/396750/e2c7db3746d412d9d25f276b6918931a6a34fe4e.jpg);
+  background-size: cover;
+}
+
+h1{
+  position: relative;
+  top: 1.3rem;
+  text-align: center;
+  color: white;
+}
+
+#box-container {
+  position: relative;
+  top: 12rem;
+  height: 300px;
+  width: 700px;
+  margin: auto;
+
+  /* border-color: gray;
+  border-width: 3px;
+  border-style: solid; */
+}
+
+#box-1 {
+  background-color: dodgerblue;
+  width: 200px;
+  height: 200px;
+  float: left;
+
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+#box-2 {
+  background-color: orangered;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  float: right;
+
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 3%;
+}
+
+#bulletproof-1 {
+  background-color: green;
+  width: 70px;
+  height: 70px;
+
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5%;
+  opacity: 50%;
+}
+
+#bulletproof-2 {
+  background-color: green;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  float: right;
+
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5%;
+}
+
+#TacticalHelment-1 {
+  background-color: green;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  float: left;
+
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5%;
+}
