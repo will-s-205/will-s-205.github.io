@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* ANY BOX/DIV/SECTION WILL BE RESIZED ACCORDINGLY TO THE ELEMENTS */
+    /* box-sizing: border-box; */
+}
+
+/* TO KEPT ONLY ONE ELMENT IN THE MIDDLE OF THE SCREEN BY HEIGHT */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-image: linear-gradient(gray, black, gray);
+    /* COMMENT OUT LINES BELOW IF YOU WANT TO ADD SECOND FIGHTING SCENE */
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+p {
+    color: #fff;
+    background-color: gray;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
+
+button {
+    width: 100%;
+    height: 30px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px black;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+
+.divBackgroundSceneInTheCenter {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    margin: 5% auto;
+    /* margin: 0 auto; */
+    /* OR (TO KEPT ONLY ONE ELMENT IN THE MIDDLE OF THE SCREEN BY WIDTH)*/
+    /* margin: calc(100%/6) auto; */
+    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg);
+    background-size: 600px 300px;
+    border: 10px solid gray;
+    border-radius: 10px;
+}
+
+.fightScene {
+    display: flex;
+    margin: 0 auto;
+    /* height: 100vh; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.fighterCard1 {
+    width: 100px;
+    background-color: silver;
+    /* height: 100px; */
+    /* OR (THIS WAY BACKGROUND COLOR WILL FILL DIV ELEMENT INCLUDING BUTTON AND HEALTHBAR) */
+    min-height: auto;
+    border: 5px solid gray;
+    border-radius: 30px;
+    margin: 50px;
+}
+
+.fighterCard2 {
+    width: 100px;
+    background-color: silver;
+    min-height: auto;
+    border: 5px solid gray;
+    border-radius: 30px;
+    margin: 50px;
+}
