@@ -32,7 +32,6 @@ var playerTwo = {
 
 var random = Math.random() * 100
 var hitChance = (playerOne.accuracy - playerTwo.defense)
-var hitChance = (playerOne.accuracy - playerTwo.defense)
 
 function fight() {
   console.log(Math.random() * 100);
