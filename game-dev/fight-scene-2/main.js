@@ -68,7 +68,7 @@ function fight() {
     gameData.health1 -= bow.bowDmg;
     document.getElementById("health").innerHTML = gameData.health1 + " Health";
   }
-} // MAKE HIT OR MISS CONSOLE.LOG AND HIT CHANCE IN THE BRACKET()
+}// MAKE HIT OR MISS CONSOLE.LOG AND HIT CHANCE IN THE BRACKET()!!!!!
 
 // AUTOMATIC FIGHTING
 var mainGameLoop = window.setInterval(function () {
