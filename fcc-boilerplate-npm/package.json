@@ -1,6 +1,6 @@
 {
-	"author": "William Step",
 	"name": "fcc-learn-npm-package-json",
+	"author": "William Step",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
