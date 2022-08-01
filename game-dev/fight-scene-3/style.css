@@ -10,6 +10,11 @@ body {
     background-color: silver;
 }
 
+p {
+    font-weight: bold;
+    text-shadow: 0 0 5px gray;
+}
+
 .playerStatusBar {
     width: 10rem;
     height: auto;
@@ -34,23 +39,19 @@ body {
 .playerStatusCard {
     width: 90%;
     height: 9rem;
-    background-color: silver;
-    border: 2px solid black;
+    border: 2px solid silver;
     border-radius: 10px;
     margin: 5px auto 5px;
-    /* background-color: brown; */
-    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5)), url(images/Base.jpeg);
+    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5));
 }
 
 .opponentStatusCard {
     width: 90%;
     height: 9rem;
-    background-color: silver;
-    border: 2px solid black;
+    border: 2px solid silver;
     border-radius: 10px;
     margin: 5px auto 5px;
-    /* background-color: brown; */
-    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5)), url(images/Base.jpeg);
+    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5));
 }
 
 /* KEEP TEXT IN CENTE OF THE CARD */
@@ -66,9 +67,6 @@ body {
 .fightSceneContainer {
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* align-content: center; */
     border: 3px solid gray;
     border-radius: 10px;
     background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg);
@@ -78,8 +76,26 @@ body {
     width: 600px;
     height: 300px;
     margin: auto auto;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5));
     background-color: silver;
     border-radius: 10px;
     border: 3px solid gray;
+}
+
+.fighterCardOverall {
+    width: 100px;
+    margin: 10%;
+    padding: 1%;
+    background-color: silver;
+    border: 5px solid gray;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.player {
+    float: left;
+}
+
+.opponent {
+    float: right;
 }
