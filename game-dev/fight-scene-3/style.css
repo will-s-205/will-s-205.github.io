@@ -15,8 +15,7 @@ body {
     height: auto;
     background-color: gray;
     border: 3px solid black;
-    border-radius: 10px;   
-    /* position: absolute; */
+    border-radius: 10px;
     float: left;
 }
 
@@ -59,18 +58,27 @@ body {
     text-shadow: 0 0 15px black;
 }
 
+.fightSceneContainer {
+    height: 100vh;
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    align-content: center;
+    /* border: 3px solid gray; */
+}
+
 .divBackgroundSceneInTheCenter {
     width: 600px;
     height: 300px;
     /* display: flex; */
     /* flex-direction: row; */
-    /* margin: 0 auto; */
+    margin: 20% auto;
     /* OR (TO KEPT ONLY ONE ELMENT IN THE MIDDLE OF THE SCREEN BY WIDTH)*/
-    margin: calc(100%/6) calc(100%/4.2);
+    /* margin: calc(100%/6) auto; */
     /* background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg); */
     background-color: silver;
     /* background-size: 600px 300px; */
     border: 3px solid gray;
     border-radius: 10px;
-    position: absolute;
+    /* position: absolute; */
 }
