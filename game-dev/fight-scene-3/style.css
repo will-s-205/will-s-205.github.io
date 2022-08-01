@@ -14,39 +14,43 @@ body {
     width: 10rem;
     height: auto;
     background-color: gray;
-    border: 3px solid black;
+    border: 1px solid gray;
     border-radius: 10px;
     float: left;
-}
-
-.playerStatusCard {
-    width: 90%;
-    height: 9rem;
-    background-color: silver;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 5px auto 5px;
-    background-color: brown;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0));
 }
 
 .opponentStatusBar {
     width: 10rem;
     height: auto;
     background-color: gray;
-    border: 3px solid black;
+    border: 1px solid gray;
     border-radius: 10px;
     margin-right: 0;
     float: right;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0));
+}
+
+.playerStatusCard {
+    width: 90%;
+    height: 9rem;
+    background-color: silver;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px auto 5px;
+    /* background-color: brown; */
+    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5)), url(images/Base.jpeg);
 }
 
 .opponentStatusCard {
     width: 90%;
     height: 9rem;
     background-color: silver;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     margin: 5px auto 5px;
-    background-color: brown;
+    /* background-color: brown; */
+    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5)), url(images/Base.jpeg);
 }
 
 /* KEEP TEXT IN CENTE OF THE CARD */
@@ -58,27 +62,24 @@ body {
     text-shadow: 0 0 15px black;
 }
 
+/* FIGHT SCENE */
 .fightSceneContainer {
     height: 100vh;
     display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
-    align-content: center;
-    /* border: 3px solid gray; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    border: 3px solid gray;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg);
 }
 
 .divBackgroundSceneInTheCenter {
     width: 600px;
     height: 300px;
-    /* display: flex; */
-    /* flex-direction: row; */
-    margin: 20% auto;
-    /* OR (TO KEPT ONLY ONE ELMENT IN THE MIDDLE OF THE SCREEN BY WIDTH)*/
-    /* margin: calc(100%/6) auto; */
-    /* background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg); */
+    margin: auto auto;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg);
     background-color: silver;
-    /* background-size: 600px 300px; */
-    border: 3px solid gray;
     border-radius: 10px;
-    /* position: absolute; */
+    border: 3px solid gray;
 }
