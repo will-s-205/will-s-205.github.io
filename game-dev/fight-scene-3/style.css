@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* ANY BOX/DIV/SECTION WILL BE RESIZED ACCORDINGLY TO THE ELEMENTS */
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: silver;
+}
+
+.playerStatusBar {
+    width: 10rem;
+    height: auto;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 10px;   
+    /* position: absolute; */
+    float: left;
+}
+
+.playerStatusCard {
+    width: 90%;
+    height: 9rem;
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px auto 5px;
+    background-color: brown;
+}
+
+.opponentStatusBar {
+    width: 10rem;
+    height: auto;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 0;
+    float: right;
+}
+
+.opponentStatusCard {
+    width: 90%;
+    height: 9rem;
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px auto 5px;
+    background-color: brown;
+}
+
+/* KEEP TEXT IN CENTE OF THE CARD */
+.statusCardText {
+    text-align: center;
+    margin: 20% auto;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 15px black;
+}
+
+.divBackgroundSceneInTheCenter {
+    width: 600px;
+    height: 300px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* margin: 0 auto; */
+    /* OR (TO KEPT ONLY ONE ELMENT IN THE MIDDLE OF THE SCREEN BY WIDTH)*/
+    margin: calc(100%/6) calc(100%/4.2);
+    /* background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg); */
+    background-color: silver;
+    /* background-size: 600px 300px; */
+    border: 3px solid gray;
+    border-radius: 10px;
+    position: absolute;
+}
