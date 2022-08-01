@@ -12,7 +12,8 @@ body {
 
 p {
     font-weight: bold;
-    text-shadow: 0 0 5px gray;
+    text-shadow: 0 0 5px black;
+    color: #fff;
 }
 
 .playerStatusBar {
@@ -67,7 +68,6 @@ p {
 .fightSceneContainer {
     height: 100vh;
     display: flex;
-    border: 3px solid gray;
     border-radius: 10px;
     background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 255, 0, 0.5)), url(images/Base.jpeg);
 }
@@ -80,22 +80,67 @@ p {
     background-color: silver;
     border-radius: 10px;
     border: 3px solid gray;
+    display: flex;
 }
 
 .fighterCardOverall {
     width: 100px;
-    margin: 10%;
-    padding: 1%;
+    margin: auto auto;
+    padding: 2%;
     background-color: silver;
-    border: 5px solid gray;
+    border: 3px solid gray;
     border-radius: 30px;
     text-align: center;
 }
 
-.player {
-    float: left;
+.healthbar1 {
+    background-color: #fff;
+    /* border: 2px solid gray; */
+    border-radius: 4px;
+    background-color: pink;
 }
 
-.opponent {
-    float: right;
+#health1 {
+    width: 100%;
+    border-radius: 4px;
+    background-color: red;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    text-align: left;
+    /* HIGHLIGHT HEALTHBAR */
+    /* MAKE TRIGGER ANIMATION ON HIT */
+    animation-name: backdiv;
+    animation-duration: 1s;
+}
+
+/* HIGHLIGHT STATUS CARD */
+.playerStatusCard:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+/* HIGHLIGHT STATUS CARD */
+.opponentStatusCard:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+/* HIGHLIGHT STATUS CARD */
+@keyframes background-color {
+    100% {
+        background-color: #000000;
+    }
+}
+
+/* HIGHLIGHT HEALTHBAR */
+/* MAKE HILIGHT TRIGGER ON HIT */
+@keyframes backdiv {
+    50% {
+        /* background: #ffe6f2; */
+        background: brown;
+    }
 }
