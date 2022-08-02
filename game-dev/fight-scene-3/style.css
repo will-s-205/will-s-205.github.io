@@ -95,14 +95,14 @@ p {
 
 .healthbar1 {
     background-color: #fff;
-    /* border: 2px solid gray; */
+    border: 1px solid gray;
     border-radius: 4px;
     background-color: pink;
 }
 
 #health1 {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: red;
     border: 1px solid black;
     color: #fff;
@@ -110,7 +110,29 @@ p {
     text-shadow: 0 0 5px black;
     text-align: left;
     /* HIGHLIGHT HEALTHBAR */
-    /* MAKE TRIGGER ANIMATION ON HIT */
+    /* MAKE TRIGGER ANIMATION ON HEAL (NOT A HIT) */
+    animation-name: backdiv;
+    animation-duration: 1s;
+}
+
+.healthbar2 {
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-color: pink;
+}
+
+#health2 {
+    width: 100%;
+    border-radius: 3px;
+    background-color: red;
+    border: 1px solid black;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    text-align: left;
+    /* HIGHLIGHT HEALTHBAR */
+    /* MAKE TRIGGER ANIMATION ON HEAL (NOT A HIT) */
     animation-name: backdiv;
     animation-duration: 1s;
 }
@@ -144,3 +166,25 @@ p {
         background: brown;
     }
 }
+
+.fightButton:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    /* animation-iteration-count: infinite; */
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

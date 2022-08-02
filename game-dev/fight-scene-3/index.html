@@ -36,21 +36,23 @@
             <div class="fighterCardOverall player">
                 <p>Swordsman</p>
                 <img class="images" src="images/swordman.svg">
-                <div class="healthbar1"> 
+                <div id="fighterCardId" class="healthbar1"> 
                     <p id="health1">100</p>
                 </div>
-
             </div>
 
-            <div class="fighterCardOverall opponent" onclick="fight1()">
+            <!-- FIGHT BUTTON -->
+            <div class="fighterCardOverall fightButton" onclick="fight1()">
                 <img class="images">
-                <p>FIGHT</p> // ADD ANIMATION IN CSS OR JS ON GETTING HIT
+                <p>FIGHT</p>
             </div>
 
             <div class="fighterCardOverall opponent">
-                <img class="images" src="images/bowman.svg">
                 <p>Bowman</p>
-                <div class="healthbar2"></div>
+                <img class="images" src="images/bowman.svg">
+                <div class="healthbar2"> 
+                    <p id="health2">100</p>
+                </div>
             </div>
 
         </div>
@@ -61,3 +63,30 @@
 </body>
 
 </html>
+
+STRENGTH
+Ammunition: how long unit will stay in full strength
+Amount of melee damage:
+Critical multiplier:
+
+DEXTERY
+Hit chance:
+Critical chance:
+Evasion: ranged
+Dodge: melee
+
+ENDURANCE
+Health: amount of health
+Ammunition: how long unit will stay in full strength
+Energy: to use skills player need to reserve some amount energy.
+
+MIND
+Perception:
+Reflex/Speech
+Magic/Psi Energy amount
+Magic/Psi Resistance/FlatReduction
+
+LUCK
+Humanity have no chance against other races. But they have luck. Some times hard luck.
+points: if bar fully regenerated then unit can have luck poin to spend during the mission
+points: if dextery/defence is high then unit getting only a half damage or at highes rates nothing at all
