@@ -4,14 +4,14 @@ var gameData = {
   dmgPerClick: 3
 }
 
-var item = document.getElementById("fighterCardId");
+
 
 
 function fight1() {
   gameData.health1 -= gameData.dmgPerClick;
   document.getElementById("health1").innerHTML = gameData.health1;
   document.getElementById("health1").style.width = gameData.health1 + "%"; // document.getElementById("attack").style.width = health + "px";
-  // document.getElementById("fighterCardId").style.animationName('shake');
+  let item = document.getElementById("fighterCardId");
   item.animate(
     [
       { transform: 'translate(3px) rotate(3deg)' },
