@@ -8,7 +8,9 @@ var gameData = {
     gameData.health1 -= gameData.dmgPerClick;
     document.getElementById("health1").innerHTML = gameData.health1;
     document.getElementById("health1").style.width = gameData.health1 + "%"; // document.getElementById("attack").style.width = health + "px";
-    // document. location. reload();
+    if (gameData.health1 <=0){
+        document. location. reload();
+    }
     console.log("damage!");
   }
   
