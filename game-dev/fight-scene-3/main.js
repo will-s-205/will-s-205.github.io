@@ -4,24 +4,16 @@ var gameData = {
   dmgPerClick: 3
 }
 
-
-
-
 function fight1() {
   gameData.health1 -= gameData.dmgPerClick;
   document.getElementById("health1").innerHTML = gameData.health1;
+  // document.getElementById("health1").style.backgroundColor = "blue";
   document.getElementById("health1").style.width = gameData.health1 + "%"; // document.getElementById("attack").style.width = health + "px";
-  let item = document.getElementById("fighterCardId");
-  item.animate(
-    [
-      { transform: 'translate(3px) rotate(3deg)' },
-    ],
-    {
-      duration: 100
-    }
+  document.getElementsByClassName("healthbar1").animate(
+    [{ transform: 'translate(3px) rotate(3deg)' },
+    {transform: 'color: blue'}],
+    { duration: 100 }
   );
-
-
   if (gameData.health1 <= 0) {
     document.location.reload();
   }
