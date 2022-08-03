@@ -38,6 +38,8 @@ var hitChancePlayerTwo = (playerTwo.accuracy + bow.bowAcc - playerOne.defense - 
 // }, 100)
 
 document.querySelector(".autoFightButton").addEventListener('click', () => {
+
+  window.setInterval(function () {
   let CtH = Math.floor(Math.random() * 100);
   if (CtH < hitChancePlayerOne) {
     console.log("SWORDSMAN HIT CHANCE: " + hitChancePlayerOne+"vs"+CtH);
@@ -65,6 +67,9 @@ document.querySelector(".autoFightButton").addEventListener('click', () => {
   } else {
     console.log("Archer missed " + hitChancePlayerTwo+"vs"+CtH);
   }
+}, 
+// TIME BETWEEN TURNS
+1000)
 });
 
 // THREAD.SLEEP // USEFUL UTIL
