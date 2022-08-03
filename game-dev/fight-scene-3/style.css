@@ -35,8 +35,8 @@ p {
     display: flex;
 }
 
-.fightButton:hover {
-    /* .fightButton:active{ */
+/* .fightButton:hover { */
+    .fightButton:active{
     transform: scale(.95);
     transition: transform .2s;
 }
