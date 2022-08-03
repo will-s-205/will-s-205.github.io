@@ -2,6 +2,8 @@ var random = Math.random() * 100
 var randomFloor = Math.floor(Math.random() * 100)
 
 var gameData = {
+  round: 0,
+  roundPerClick: 1,
   health1: 100,
   health2: 100,
   dmgPerClick: 3
@@ -40,37 +42,47 @@ var hitChancePlayerTwo = (playerTwo.accuracy + bow.bowAcc - playerOne.defense - 
 document.querySelector(".autoFightButton").addEventListener('click', () => {
 
   window.setInterval(function () {
-  let CtH = Math.floor(Math.random() * 100);
-  if (CtH < hitChancePlayerOne) {
-    console.log("SWORDSMAN HIT CHANCE: " + hitChancePlayerOne+"vs"+CtH);
-    gameData.health2 -= sword.swordDmg;
-    document.getElementById("health2").style.width = gameData.health2 + "%";
-    document.getElementById("health2").animate(shortPushLeft, twoHundredsMs);
-    // IF HEALTH LESS 0 OR LESS THEN RESET PAGE
-    if (gameData.health2 <= 0) {
-      document.location.reload();
+    let CtH = Math.floor(Math.random() * 100);
+    if (CtH < hitChancePlayerOne) {
+      console.log("SWORDSMAN HIT CHANCE: " + hitChancePlayerOne + "vs" + CtH);
+      gameData.health2 -= sword.swordDmg;
+      document.getElementById("health2").style.width = gameData.health2 + "%";
+      document.getElementById("health2").animate(shortPushLeft, twoHundredsMs);
+      // IF HEALTH LESS 0 OR LESS THEN RESET PAGE
+      if (gameData.health2 <= 0) {
+        document.location.reload();
+      }
+      console.log("Archer got damage!" + gameData.health2);
+    } else {
+      console.log("Swordsman missed " + hitChancePlayerOne + "vs" + CtH);
     }
-    console.log("Archer got damage!"+gameData.health2);
-  } else {
-    console.log("Swordsman missed " + hitChancePlayerOne+"vs"+CtH);
-  }
-  if (CtH < hitChancePlayerTwo) {
-    console.log("ARCHER HIT CHANCE: " + hitChancePlayerTwo+"vs"+CtH);
-    gameData.health1 -= bow.bowDmg;
-    document.getElementById("health1").style.width = gameData.health1 + "%";
-    document.getElementById("health1").animate(shortPushLeft, twoHundredsMs);
-    // IF HEALTH LESS 0 OR LESS THEN RESET PAGE
-    if (gameData.health1 <= 0) {
-      document.location.reload();
+    if (CtH < hitChancePlayerTwo) {
+      console.log("ARCHER HIT CHANCE: " + hitChancePlayerTwo + "vs" + CtH);
+      gameData.health1 -= bow.bowDmg;
+      document.getElementById("health1").style.width = gameData.health1 + "%";
+      document.getElementById("health1").animate(shortPushLeft, twoHundredsMs);
+      // IF HEALTH LESS 0 OR LESS THEN RESET PAGE
+      if (gameData.health1 <= 0) {
+        document.location.reload();
+      }
+      console.log("Swordsman got damage!");
+    } else {
+      console.log("Archer missed " + hitChancePlayerTwo + "vs" + CtH);
     }
-    console.log("Swordsman got damage!");
-  } else {
-    console.log("Archer missed " + hitChancePlayerTwo+"vs"+CtH);
-  }
-}, 
-// TIME BETWEEN TURNS
-1000)
+    // ADD ROUNDS
+    roundCount();
+  },
+    // TIME BETWEEN TURNS
+    1000)
 });
+
+function roundCount() {
+  gameData.round += gameData.roundPerClick
+  document.getElementById("round").innerHTML = gameData.round;
+  document.getElementById("round").style.color = "white";
+  document.getElementById("round").style.fontWeight = "bold";
+  document.getElementById("round").style.textShadow = "0 0 5px black";
+}
 
 // THREAD.SLEEP // USEFUL UTIL
 function sleep(seconds) {
@@ -120,6 +132,7 @@ document.querySelector(".fightButton").addEventListener('click', () => {
   if (gameData.health1 <= 0) {
     document.location.reload();
   }
+  roundCount();
   console.log("damage!");
 });
 
