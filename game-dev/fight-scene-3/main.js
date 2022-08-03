@@ -8,7 +8,7 @@ function fight1() {
   gameData.health1 -= gameData.dmgPerClick;
   document.getElementById("health1").innerHTML = gameData.health1;
   // document.getElementById("health1").style.backgroundColor = "blue";
-  document.getElementById("health1").style.width = gameData.health1 + "%"; // document.getElementById("attack").style.width = health + "px";
+  document.getElementById("health1").style.width = gameData.health1 + "%";
   document.getElementsByClassName("healthbar1").animate(
     [{ transform: 'translate(3px) rotate(3deg)'},],
     { duration: 100 }
