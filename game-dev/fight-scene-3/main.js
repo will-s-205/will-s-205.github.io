@@ -10,8 +10,7 @@ function fight1() {
   // document.getElementById("health1").style.backgroundColor = "blue";
   document.getElementById("health1").style.width = gameData.health1 + "%"; // document.getElementById("attack").style.width = health + "px";
   document.getElementsByClassName("healthbar1").animate(
-    [{ transform: 'translate(3px) rotate(3deg)' },
-    {transform: 'color: blue'}],
+    [{ transform: 'translate(3px) rotate(3deg)'},],
     { duration: 100 }
   );
   if (gameData.health1 <= 0) {
