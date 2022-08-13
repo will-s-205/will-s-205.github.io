@@ -28,41 +28,50 @@
         <!-- PLAYER INVENTORY -->
         <div class="playerStatusBar">
             <div class="statusCards">
-                <h1 class="statusCardText">NO FOOD</h1>
+                <h1 class="statusCardText">Metal helment</h1>
+                <p id="playerHeadItemDurability">100</p>
             </div>
             <div class="statusCards">
-                <h1 class="statusCardText">HIGH MORAL</h1>
+                <h1 class="statusCardText">Medium armor</h1>
+                <p id="playerBodyItemDurability">100</p>
+            </div>
+            <div class="statusCards">
+                <h1 class="statusCardText">Light Shield</h1>
+                <p id="playerLeftArmItemDurability">100</p>
             </div>
         </div>
 
         <div class="divBackgroundSceneInTheCenter">
 
             <!-- PLAYER -->
-            <div class="cards player">
+            <div id="swordsman" class="cards player">
                 <p>Swordsman</p>
-                <img id="swordsman" class="images" src="images/swordman.svg">
+                <img class="images" src="images/swordman.svg">
                 <div class="healthbar1">
                     <p id="health1">100</p>
                 </div>
             </div>
 
-            <!-- FIGHT BUTTON -->
-            <div class="cards fightButton">
-                <p>FIGHT</p>
-            </div>
-            <!-- ROUNDS COUNTER -->
-            <div id="round" class="cards">
-                <p>0</p>
-            </div>
-            <!-- AUTO-FIGHT BUTTON -->
-            <div class="cards autoFightButton">
-                <p>AUTO FIGHT</p>
+
+            <div class="fightMenu">
+
+                <!-- AUTO-FIGHT BUTTON -->
+                <div class="cards autoFightButton">
+                    <p>AUTO FIGHT</p>
+                </div>
+                <!-- ROUNDS COUNTER -->
+                <div id="round" class="cards">
+                    <p>0</p>
+                </div>
+                <div id="distance" class="cards">
+                    <p>10</p>
+                </div>
             </div>
 
             <!-- OPPONENT -->
-            <div class="cards opponent">
+            <div id="bowman" class="cards opponent">
                 <p>Bowman</p>
-                <img id="bowman" class="images" src="images/bowman.svg">
+                <img class="images" src="images/bowman.svg">
                 <div class="healthbar2">
                     <p id="health2">100</p>
                 </div>
@@ -71,23 +80,13 @@
 
         <!-- OPPONENTS INVENTORY -->
         <div class="opponentStatusBar">
-            <div class="statusCards">
-                <h1 class="statusCardText">NO SCRAP</h1>
+            <div class="statusCards itemCard">
+                <h1 class="statusCardText">Cloth hood</h1>
+                <p id="opponentHeadItemDurability">100</p>
             </div>
             <div class="statusCards">
-                <h1 class="statusCardText">NO AMMO</h1>
-            </div>
-            <div class="statusCards">
-                <h1 class="statusCardText">NO SCRAP</h1>
-            </div>
-            <div class="statusCards">
-                <h1 class="statusCardText">NO AMMO</h1>
-            </div>
-            <div class="statusCards">
-                <h1 class="statusCardText">NO SCRAP</h1>
-            </div>
-            <div class="statusCards">
-                <h1 class="statusCardText">NO AMMO</h1>
+                <h1 class="statusCardText">Light armor</h1>
+                <p id="opponentBodyItemDurability">100</p>
             </div>
         </div>
 

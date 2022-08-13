@@ -35,8 +35,8 @@ p {
     display: flex;
 }
 
-/* .fightButton:hover { */
-.fightButton:active {
+/* .autoFightButton:hover { */
+.autoFightButton:active {
     transform: scale(.95);
     transition: transform .2s;
 }
@@ -45,11 +45,22 @@ p {
 .cards {
     width: 100px;
     margin: auto auto;
-    padding: 2%;
+    padding: 10px;
     background-color: silver;
     border: 3px solid gray;
     border-radius: 5px;
     text-align: center;
+}
+
+.itemCard{
+    background-color: white;
+}
+
+.fightMenu{
+    margin: auto auto;
+    background-color: darkgrey;
+    border: 3px solid gray;
+    padding: 3px;
 }
 
 .healthbar1 {

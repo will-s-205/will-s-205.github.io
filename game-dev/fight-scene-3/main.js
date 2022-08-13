@@ -3,7 +3,8 @@ var randomFloor = Math.floor(Math.random() * 100)
 
 var gameData = {
   round: 0,
-  roundPerClick: 1,
+  distance: 10,
+  onePerClick: 1,
   health1: 100,
   health2: 100,
   dmgPerClick: 3
@@ -45,27 +46,27 @@ document.querySelector(".autoFightButton").addEventListener('click', () => {
   // SWORDSMAN LOGIC
   window.setInterval(function () {
     let CtH = Math.floor(Math.random() * 100);
-    if (gameData.round >=10){ // swordsman moving across 10 tiles to reach Bowman
-    if (CtH < hitChancePlayerOne) {
-      gameData.health2 -= sword.swordDmg;
-      document.getElementById("health2").style.width = gameData.health2 + "%";
-      document.getElementById("health2").animate(redShortPushLeft, twoHundredsMs);
-      if (gameData.health2 <= 0) {
-        document.location.reload();
+    if (gameData.round >= 10) { // swordsman moving across 10 tiles to reach Bowman
+      if (CtH < hitChancePlayerOne) {
+        gameData.health2 -= sword.swordDmg;
+        document.getElementById("health2").style.width = gameData.health2 + "%";
+        document.getElementById("health2").animate(healthDecreased, twoHundredsMs);
+        if (gameData.health2 <= 0) {
+          document.location.reload();
+        }
+        console.log("Swordsman hit " + hitChancePlayerOne + "vs" + CtH);
+        document.getElementById("bowman").animate(hit, twoHundredsMs);
+      } else {
+        console.log("Swordsman miss " + hitChancePlayerOne + "vs" + CtH);
+        document.getElementById("bowman").animate(rightDmgAvoided, twoHundredsMs);
       }
-      console.log("Swordsman hit " + hitChancePlayerOne + "vs" + CtH);
-      document.getElementById("bowman").animate(hit, twoHundredsMs);
-    } else {
-      console.log("Swordsman miss " + hitChancePlayerOne + "vs" + CtH);
-      document.getElementById("bowman").animate(rightDmgAvoided, twoHundredsMs);
     }
-  }
 
-  // BOWMAN LOGIC
+    // BOWMAN LOGIC
     if (CtH < hitChancePlayerTwo) {
       gameData.health1 -= bow.bowDmg;
       document.getElementById("health1").style.width = gameData.health1 + "%";
-      document.getElementById("health1").animate(redShortPushLeft, twoHundredsMs);
+      document.getElementById("health1").animate(healthDecreased, twoHundredsMs);
       if (gameData.health1 <= 0) {
         document.location.reload();
       }
@@ -77,17 +78,31 @@ document.querySelector(".autoFightButton").addEventListener('click', () => {
     }
     // ADD ROUNDS
     roundCount();
+    distanceCount();
   },
     // TIME BETWEEN TURNS
-    300)
+    1000)
 });
 
 function roundCount() {
-  gameData.round += gameData.roundPerClick
+  gameData.round += gameData.onePerClick
   document.getElementById("round").innerHTML = gameData.round;
   document.getElementById("round").style.color = "white";
   document.getElementById("round").style.fontWeight = "bold";
   document.getElementById("round").style.textShadow = "0 0 5px black";
+}
+
+function distanceCount() {
+  if (gameData.distance > 0) {
+    gameData.distance -= gameData.onePerClick
+    document.getElementById("distance").innerHTML = gameData.distance;
+    document.getElementById("distance").style.color = "white";
+    document.getElementById("distance").style.fontWeight = "bold";
+    document.getElementById("distance").style.textShadow = "0 0 5px black";
+  }
+  else {
+    document.getElementById("distance").innerHTML = "MELEE";
+  }
 }
 
 // THREAD.SLEEP // USEFUL UTIL
@@ -96,7 +111,7 @@ function sleep(seconds) {
   while (new Date().getTime() <= e) { }
 }
 
-const redShortPushLeft = [
+const healthDecreased = [
   { transform: 'translate(3px) rotate(3deg)' },
   { background: 'brown' }
 ]
@@ -122,16 +137,32 @@ const fourHundredsMs = {
   duration: 400,
 }
 
-document.querySelector(".fightButton").addEventListener('click', () => {
+document.getElementById("swordsman").addEventListener('click', () => {
   gameData.health1 -= gameData.dmgPerClick;
   document.getElementById("health1").innerHTML = gameData.health1;
-  // document.getElementById("health1").style.backgroundColor = "blue"; // EXAMPLE
+  // document.getElementById("health1").style.backgroundColor = "green"; // poison EXAMPLE
   document.getElementById("health1").style.width = gameData.health1 + "%";
-  document.getElementById("health1").animate(redShortPushLeft, twoHundredsMs);
+  document.getElementById("health1").animate(healthDecreased, twoHundredsMs);
   if (gameData.health1 <= 0) {
     document.location.reload();
   }
   roundCount();
+  distanceCount()
   console.log("manual damage!");
   document.getElementById("swordsman").animate(hit, twoHundredsMs);
 });
+
+document.getElementById("bowman").addEventListener('click', () => {
+  gameData.health2 -= gameData.dmgPerClick;
+  document.getElementById("health2").innerHTML = gameData.health2;
+  // document.getElementById("health2").style.backgroundColor = "green"; // poison EXAMPLE
+  document.getElementById("health2").style.width = gameData.health2 + "%";
+  document.getElementById("health2").animate(healthDecreased, twoHundredsMs);
+  if (gameData.health2 <= 0) {
+    document.location.reload();
+  }
+  roundCount();
+  console.log("manual damage!");
+  document.getElementById("bowman").animate(hit, twoHundredsMs);
+});
+
