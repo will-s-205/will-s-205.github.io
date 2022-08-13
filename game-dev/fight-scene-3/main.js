@@ -28,7 +28,8 @@ var bow = {
   bowDmg: 5
 }
 var shield = {
-  shieldDef: 20
+  shieldDef: 20,
+  shieldDurability: 100
 }
 
 // ACCURACY CALCULATIONS
@@ -137,21 +138,6 @@ const fourHundredsMs = {
   duration: 400,
 }
 
-document.getElementById("swordsman").addEventListener('click', () => {
-  gameData.health1 -= gameData.dmgPerClick;
-  document.getElementById("health1").innerHTML = gameData.health1;
-  // document.getElementById("health1").style.backgroundColor = "green"; // poison EXAMPLE
-  document.getElementById("health1").style.width = gameData.health1 + "%";
-  document.getElementById("health1").animate(healthDecreased, twoHundredsMs);
-  if (gameData.health1 <= 0) {
-    document.location.reload();
-  }
-  roundCount();
-  distanceCount()
-  console.log("manual damage!");
-  document.getElementById("swordsman").animate(hit, twoHundredsMs);
-});
-
 document.getElementById("bowman").addEventListener('click', () => {
   gameData.health2 -= gameData.dmgPerClick;
   document.getElementById("health2").innerHTML = gameData.health2;
@@ -166,3 +152,23 @@ document.getElementById("bowman").addEventListener('click', () => {
   document.getElementById("bowman").animate(hit, twoHundredsMs);
 });
 
+document.getElementById("swordsman").addEventListener('click', () => {
+  if (shield.shieldDurability > 0) {
+    shield.shieldDurability -= gameData.dmgPerClick;
+    document.getElementById("playerLeftArmItemDurability").innerHTML = shield.shieldDurability;
+    document.getElementById("shield").animate(hit, twoHundredsMs);
+  } else {
+    gameData.health1 -= gameData.dmgPerClick;
+    document.getElementById("health1").innerHTML = gameData.health1;
+    // document.getElementById("health1").style.backgroundColor = "green"; // poison EXAMPLE
+    document.getElementById("health1").style.width = gameData.health1 + "%";
+    document.getElementById("health1").animate(healthDecreased, twoHundredsMs);
+    if (gameData.health1 <= 0) {
+      document.location.reload();
+    }
+    roundCount();
+    distanceCount()
+    console.log("manual damage!");
+    document.getElementById("swordsman").animate(hit, twoHundredsMs);
+  }
+});
