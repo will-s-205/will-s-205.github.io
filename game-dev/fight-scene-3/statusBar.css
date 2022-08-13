@@ -8,53 +8,38 @@
 }
 
 .playerStatusBar {
+    /* float: left; */
     width: 10rem;
-    height: auto;
-    background-color: gray;
-    border: 1px solid gray;
-    border-radius: 10px;
-    float: left;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0));
+    /* height: 100%; */
+    /* background-color: gray; */
+    /* border: 1px solid gray; */
+    /* border-radius: 10px; */
+    /* margin-right: 0; */
+    /* background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0)); */
 }
 
 .opponentStatusBar {
+    /* float: right; */
     width: 10rem;
-    height: auto;
-    background-color: gray;
-    border: 1px solid gray;
-    border-radius: 10px;
-    margin-right: 0;
-    float: right;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0));
+    /* height: auto; */
+    /* background-color: gray; */
+    /* border: 1px solid gray; */
+    /* border-radius: 10px; */
+    /* margin-right: 0; */
+    /* background-image: linear-gradient(rgba(0, 0, 255, 0.3), rgba(255, 0, 0, 0)); */
 }
 
-.playerStatusCard {
-    width: 90%;
+.statusCards {
+    width: 9rem;
     height: 9rem;
     border: 2px solid silver;
     border-radius: 10px;
-    margin: 5px auto 5px;
-    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5));
-}
-
-.opponentStatusCard {
-    width: 90%;
-    height: 9rem;
-    border: 2px solid silver;
-    border-radius: 10px;
-    margin: 5px auto 5px;
-    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.5));
+    margin: 3px auto;
+    background-image: linear-gradient(rgba(219, 0, 0, 0.778), rgba(131, 0, 0, 0.7));
 }
 
 /* HIGHLIGHT STATUS CARD */
-.playerStatusCard:hover {
-    animation-name: background-color;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-}
-
-/* HIGHLIGHT STATUS CARD */
-.opponentStatusCard:hover {
+.statusCards:hover {
     animation-name: background-color;
     animation-duration: 500ms;
     animation-fill-mode: forwards;

@@ -41,39 +41,45 @@ var hitChancePlayerTwo = (playerTwo.accuracy + bow.bowAcc - playerOne.defense - 
 
 document.querySelector(".autoFightButton").addEventListener('click', () => {
 
+
+  // SWORDSMAN LOGIC
   window.setInterval(function () {
     let CtH = Math.floor(Math.random() * 100);
+    if (gameData.round >=10){ // swordsman moving across 10 tiles to reach Bowman
     if (CtH < hitChancePlayerOne) {
-      console.log("SWORDSMAN HIT CHANCE: " + hitChancePlayerOne + "vs" + CtH);
       gameData.health2 -= sword.swordDmg;
       document.getElementById("health2").style.width = gameData.health2 + "%";
-      document.getElementById("health2").animate(shortPushLeft, twoHundredsMs);
-      // IF HEALTH LESS 0 OR LESS THEN RESET PAGE
+      document.getElementById("health2").animate(redShortPushLeft, twoHundredsMs);
       if (gameData.health2 <= 0) {
         document.location.reload();
       }
-      console.log("Archer got damage!" + gameData.health2);
+      console.log("Swordsman hit " + hitChancePlayerOne + "vs" + CtH);
+      document.getElementById("bowman").animate(hit, twoHundredsMs);
     } else {
-      console.log("Swordsman missed " + hitChancePlayerOne + "vs" + CtH);
+      console.log("Swordsman miss " + hitChancePlayerOne + "vs" + CtH);
+      document.getElementById("bowman").animate(rightDmgAvoided, twoHundredsMs);
     }
+  }
+
+  // BOWMAN LOGIC
     if (CtH < hitChancePlayerTwo) {
-      console.log("ARCHER HIT CHANCE: " + hitChancePlayerTwo + "vs" + CtH);
       gameData.health1 -= bow.bowDmg;
       document.getElementById("health1").style.width = gameData.health1 + "%";
-      document.getElementById("health1").animate(shortPushLeft, twoHundredsMs);
-      // IF HEALTH LESS 0 OR LESS THEN RESET PAGE
+      document.getElementById("health1").animate(redShortPushLeft, twoHundredsMs);
       if (gameData.health1 <= 0) {
         document.location.reload();
       }
-      console.log("Swordsman got damage!");
+      console.log("Bowman hit " + hitChancePlayerTwo + "vs" + CtH);
+      document.getElementById("swordsman").animate(hit, twoHundredsMs);
     } else {
-      console.log("Archer missed " + hitChancePlayerTwo + "vs" + CtH);
+      console.log("Bowman miss " + hitChancePlayerTwo + "vs" + CtH);
+      document.getElementById("swordsman").animate(leftDmgAvoided, twoHundredsMs);
     }
     // ADD ROUNDS
     roundCount();
   },
     // TIME BETWEEN TURNS
-    1000)
+    300)
 });
 
 function roundCount() {
@@ -90,32 +96,21 @@ function sleep(seconds) {
   while (new Date().getTime() <= e) { }
 }
 
-// =================================================================================
-
-// EXAMPLE
-// const aliceTumbling = [
-//   { transform: 'rotate(0) translate3D(-50%, -50%, 0)', color: '#000' },
-//   { color: '#431236', offset: 0.3 },
-//   { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
-// ];
-
-// EXAMPLE
-// const aliceTiming = {
-//   duration: 3000,
-//   // iterations: Infinity
-// }
-
-// ALICE EXAMPLE
-// https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
-// NEWSPAPER EXAMPLE
-// https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
-// var doAnimation = document.getElementById("health1").animate(
-//   aliceTumbling,
-//   aliceTiming
-// )
-
-const shortPushLeft = [
+const redShortPushLeft = [
   { transform: 'translate(3px) rotate(3deg)' },
+  { background: 'brown' }
+]
+
+const leftDmgAvoided = [
+  { transform: 'translate(-6px)' },
+]
+
+const rightDmgAvoided = [
+  { transform: 'translate(6px)' },
+]
+
+const hit = [
+  { transform: 'translateY(6px)' },
   { background: 'brown' }
 ]
 
@@ -123,16 +118,20 @@ const twoHundredsMs = {
   duration: 200,
 }
 
+const fourHundredsMs = {
+  duration: 400,
+}
+
 document.querySelector(".fightButton").addEventListener('click', () => {
   gameData.health1 -= gameData.dmgPerClick;
   document.getElementById("health1").innerHTML = gameData.health1;
   // document.getElementById("health1").style.backgroundColor = "blue"; // EXAMPLE
   document.getElementById("health1").style.width = gameData.health1 + "%";
-  document.getElementById("health1").animate(shortPushLeft, twoHundredsMs);
+  document.getElementById("health1").animate(redShortPushLeft, twoHundredsMs);
   if (gameData.health1 <= 0) {
     document.location.reload();
   }
   roundCount();
-  console.log("damage!");
+  console.log("manual damage!");
+  document.getElementById("swordsman").animate(hit, twoHundredsMs);
 });
-
