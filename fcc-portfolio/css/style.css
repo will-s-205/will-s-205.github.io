@@ -148,15 +148,16 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 15px;
-/*   padding-bottom: 5px; */
+  border: 1mm solid rgb(221, 221, 221);
+  border-radius: 25px;
+  /* padding-bottom: 5px; */
 }
 
 .project-btn {
   padding: 0.6rem;
   color: #eee;
   text-shadow: 0 0 6px black;
-/*   background-image: linear-gradient(0deg, #007aff 60%, #009bff);
+  /* background-image: linear-gradient(0deg, #007aff 60%, #009bff);
   border-radius: 15px; */
 }
 
