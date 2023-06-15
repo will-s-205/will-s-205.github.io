@@ -116,6 +116,10 @@ a {
 #projects {
   padding-top: 150px;
   background-color: #45567d;
+  /* background-image: url(../img/react-icon-large.png);
+  background-repeat: no-repeat;
+  background-position: right 105%;
+  background-size: 500px; */
 }
 
 .projects-grid {
