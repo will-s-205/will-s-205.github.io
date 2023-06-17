@@ -1,8 +1,8 @@
 <div >
-    <a href="https://will-s-205.github.io">
-    <p align="center"> My projects live </p>
-    </a>
-</h1>
+    <h1 align="center"> My projects live: 
+        <br>
+        <a href="https://will-s-205.github.io">will-s-205</a>
+    </h1>
   </div>
 <ul>
     <li /> <a href="https://will-s-205.github.io/fcc-portfolio">Simple Personal Portfolio</a>
