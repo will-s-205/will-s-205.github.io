@@ -8,6 +8,7 @@ html {
 body {
   background-image: linear-gradient(260deg, silver, rgba(136, 136, 206, 0.8)),
     url(https://upload.wikimedia.org/wikipedia/commons/1/1e/San_Francisco_from_the_Marin_Headlands_in_March_2019.jpg);
+    margin-top: 50px;
 }
 
 .text-style {
@@ -29,10 +30,12 @@ body {
   background: rgba(27, 27, 50, 0.4);
   padding: 2rem;
   border-radius: 2rem;
+  max-width: 450px;
+  margin: 20px auto;
 }
 
 #dropdown {
-  width: 102%;
+  width: 100%;
 }
 
 label {
@@ -42,7 +45,7 @@ label {
 }
 
 .button {
-  width: 102%;
+  width: 100%;
   padding: 0.5rem;
   border-radius: 5px;
   cursor: pointer;
@@ -69,27 +72,4 @@ button {
 
 button:hover {
   background: #005bff;
-}
-  
-    @media (min-width: 420px) {
-    #survey-form {
-      margin-left: 15%;
-      margin-right: 15%;
-        box-sizing: border-box;
-    }
-
-  @media (min-width: 680px) {
-    #survey-form {
-      margin-left: 25%;
-      margin-right: 25%;
-        box-sizing: border-box;
-    }
-    
-      @media (min-width: 1060px) {
-    #survey-form {
-      margin-left: 30%;
-      margin-right: 30%;
-        box-sizing: border-box;
-    }
-  }
 }
