@@ -57,6 +57,9 @@ section {
 
 .cards {
   display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 1rem;
 }
 
 .not-included {
@@ -112,12 +115,15 @@ h3 {
   .cards {
     flex-direction: column;
   }
+
   #video {
     width: 130%;
   }
+
   img {
     display: none;
   }
+
   .icon {
     display: none;
   }
