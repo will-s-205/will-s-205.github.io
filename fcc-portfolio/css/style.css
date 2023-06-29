@@ -106,11 +106,13 @@ a {
 
 .contact-details {
   text-shadow: 2px 2px 1px #1f1f1f;
-  transition: transform 0.3s ease-out;
+  font-weight: bold;
 }
 
 .contact-details:hover {
-  transform: translateY(3px);
+  transition: transform 0.3s ease-out;
+  transform: scale(1.03);
+  text-shadow: 0 0px 10px #008aff;
 }
 
 #projects {
