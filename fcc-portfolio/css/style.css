@@ -157,6 +157,12 @@ img {
   /* padding-bottom: 5px; */
 }
 
+.project-image:hover {
+  transition: transform 0.2s ease-in;
+  transform: scale(1.03);
+  box-shadow: 0 0px 15px silver;
+}
+
 .project-btn {
   padding: 0.6rem;
   color: #eee;
@@ -169,24 +175,30 @@ img {
   .project-tile {
     padding: 0 20px 0 20px;
   }
+
   h1 {
     padding-left: 10px;
   }
+
   .nav-link {
     margin-right: 15px;
   }
+
   .contacts {
     display: flex;
     flex-direction: column;
   }
+
   #projects {
     padding-top: 120px;
   }
+
   .projects-section {
     padding-right: 0px;
     padding-left: 0px;
     padding-bottom: 100px;
   }
+
   .projects-section-header {
     padding-bottom: 0px;
     border-bottom: 0px;
