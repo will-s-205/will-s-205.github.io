@@ -73,3 +73,9 @@ button {
 button:hover {
   background: #005bff;
 }
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 0;
+  }
+}
