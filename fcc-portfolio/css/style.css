@@ -133,11 +133,6 @@ a {
   margin: 0 auto;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
 .projects-section-header {
   padding-bottom: 50px;
   margin-bottom: 55px;
@@ -160,7 +155,7 @@ img {
 }
 
 .major-project-image {
-  height: 100%;
+  display: flex;
   width: 50%;
   object-fit: cover;
   border: 1mm solid rgb(221, 221, 221);
