@@ -159,6 +159,22 @@ img {
   /* padding-bottom: 5px; */
 }
 
+.major-project-image {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  border: 1mm solid rgb(221, 221, 221);
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-bottom: -200px;
+}
+
+.major-project-image:hover {
+  transition: transform 0.2s ease-in;
+  transform: scale(1.03);
+  box-shadow: 0 0px 15px silver;
+}
+
 .project-image:hover {
   transition: transform 0.2s ease-in;
   transform: scale(1.03);
@@ -205,4 +221,5 @@ img {
     padding-bottom: 0px;
     border-bottom: 0px;
   }
+
 }
