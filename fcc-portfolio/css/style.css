@@ -176,6 +176,23 @@ a {
   box-shadow: 0 0px 15px silver;
 }
 
+.my-picture {
+  display: flex;
+  width: 500px;
+  object-fit: cover;
+  border: 1mm solid rgb(221, 221, 221);
+  border-radius: 25px;
+  margin: 100px auto;
+  margin-bottom: -200px;
+  border-radius: 50%;
+}
+
+.my-picture:hover {
+  transition: transform 0.2s ease-in;
+  transform: scale(1.03);
+  box-shadow: 0 0px 15px silver;
+}
+
 .project-btn {
   padding: 0.6rem;
   color: #eee;
