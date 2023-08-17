@@ -72,6 +72,10 @@ p2 {
   text-shadow: 0 0 5px black;
 }
 
+#navbar {
+  z-index: 2;
+}
+
 a {
   text-decoration: none;
   color: #008aff;
@@ -199,6 +203,25 @@ a {
   text-shadow: 0 0 6px black;
   /* background-image: linear-gradient(0deg, #007aff 60%, #009bff);
   border-radius: 15px; */
+}
+
+.icons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  width: 60px;
+  z-index: 1;
+}
+
+.icons>img {
+  padding: 4px;
+  margin: 3px;
+  background-color: #eee;
+  border-radius: 30%;
+  box-shadow: 0 0 8px #000;
 }
 
 @media (max-width: 640px) {
