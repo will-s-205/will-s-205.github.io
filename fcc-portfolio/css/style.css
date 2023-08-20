@@ -214,20 +214,6 @@ a {
   opacity: 0.9;
 }
 
-/* .icons>img {
-  padding: 4px;
-  margin: 3px;
-  background-color: #eee;
-  border-radius: 30%;
-  box-shadow: 0 0 8px #000;
-} */
-
-/* .icons>img:hover {
-  transition: transform 0.2s ease-in;
-  transform: scale(1.3);
-  box-shadow: 0 0 8px #000;
-} */
-
 /* Style for the container (parent element) */
 .tooltip {
   padding: 4px;
