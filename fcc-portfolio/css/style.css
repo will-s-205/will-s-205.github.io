@@ -90,8 +90,8 @@ a {
 }
 
 #welcome-section>p {
-  margin-top: -10px;
-  letter-spacing: 0.15rem;
+  margin-top: -5px;
+  letter-spacing: 0.2rem;
 }
 
 #contact {
@@ -217,7 +217,14 @@ a {
   flex-direction: column;
   width: 65px;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+.header-icons:hover {
+  transition: transform 0.2s ease-in;
+  transform: scale(1.1);
+  opacity: 1;
+  /* box-shadow: 0 0 3px #c0c0c0; */
 }
 
 .icons {
