@@ -19,13 +19,14 @@ nav {
   /*   way to display elements in center */
   align-items: center;
   background-image: linear-gradient(180deg, #007aff 60%, #009bff);
+  opacity: 0.9;
   width: 100%;
   top: 0px;
   height: 50px;
   /*   display header before any element */
   z-index: 1;
   justify-content: right;
-  border-bottom: 2px solid #c0c0c0;
+  border-bottom: 3px solid #c0c0c0;
 }
 
 ul {
