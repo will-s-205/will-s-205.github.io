@@ -18,7 +18,7 @@ nav {
   display: flex;
   /*   way to display elements in center */
   align-items: center;
-  background-image: linear-gradient(180deg, #007aff 60%, #009bff);
+  background: #808080;
   opacity: 0.9;
   width: 100%;
   top: 0px;
@@ -35,11 +35,11 @@ ul {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #fff;
   letter-spacing: 1.1rem;
   text-transform: uppercase;
-  text-shadow: 0 0 25px #000;
+  text-shadow: 0 3px 8px #000;
   text-align: center;
 }
 
@@ -59,17 +59,10 @@ p {
   text-align: center;
 }
 
-p2 {
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0 15px #000;
-}
-
 .nav-link {
   /*   margin here keep words in ul separetated when list randered in flex */
   margin-right: 20px;
-  color: #fff;
+  color: #eee;
   text-shadow: 0 0 5px #000;
 }
 
@@ -79,21 +72,45 @@ p2 {
 
 a {
   text-decoration: none;
-  color: #008aff;
+  color: #fff;
 }
 
 #welcome-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background-image: linear-gradient(62deg, #3a3d40, #5b5b5b);
+  height: 110vh;
+  background-image: linear-gradient(62deg, #b2b2b2, #8e8e8e);
 }
 
-#welcome-section>p {
-  margin-top: -5px;
-  letter-spacing: 0.2rem;
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.job-title {
+  margin-top: 5px;
+  color: #fff;
+  letter-spacing: 0.4rem;
   text-shadow: 0 0 10px #000;
+}
+
+.about-me-container {
+  max-width: 830px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  border: 3px solid #c0c0c0;
+  padding: 30px;
+  background: #45567d;
+  border-radius: 10px;
+  box-shadow: 10px 10px 25px 10px gray;
+}
+
+.about-me {
+  color: #eee;
+  margin-top: 10px;
 }
 
 #contact {
@@ -103,7 +120,7 @@ a {
   align-items: center;
   text-align: center;
   height: 100vh;
-  background-image: linear-gradient(62deg, #3a3d40, #5b5b5b);
+  background-image: linear-gradient(62deg, #a4a4a4, #7e7e7e);
 }
 
 .contacts {
@@ -185,20 +202,13 @@ a {
 
 .my-picture {
   display: flex;
-  width: 300px;
+  width: 310px;
   object-fit: cover;
   border: 1mm solid rgb(221, 221, 221);
-  border-radius: 25px;
-  margin: 100px auto;
-  margin-bottom: -200px;
-  border-radius: 50%;
+  border-radius: 15px;
+  margin: 65px auto;
+  box-shadow: 10px 10px 25px 10px #808080;
 }
-
-/* .my-picture:hover {
-  transition: transform 0.2s ease-in;
-  transform: scale(1.03);
-  box-shadow: 0 0px 15px #c0c0c0;
-} */
 
 .project-btn {
   padding: 0.6rem;
@@ -243,7 +253,7 @@ a {
   margin: 3px;
   background-color: #eee;
   border-radius: 10%;
-  box-shadow: 0 0 8px #000;
+  box-shadow: 6px 6px 25px 6px #808080;
 }
 
 /* Style for the tooltip text (child element) */
@@ -268,37 +278,38 @@ a {
   opacity: 1;
 }
 
-@media (max-width: 640px) {
-  .project-tile {
-    padding: 0 20px 0 20px;
+@media (max-width: 2500px) {
+  #welcome-section {
+    height: 130vh;
   }
+}
 
-  h1 {
-    padding-left: 10px;
+@media (max-width: 1900px) {
+  #welcome-section {
+    height: 170vh;
   }
+}
 
-  .nav-link {
-    margin-right: 15px;
+@media (max-width: 1400px) {
+  #welcome-section {
+    height: 210vh;
   }
+}
 
-  .contacts {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 1200px) {
+  #welcome-section {
+    height: 260vh;
   }
+}
 
-  #projects {
-    padding-top: 120px;
+@media (max-width: 1000px) {
+  #welcome-section {
+    height: 310vh;
   }
+}
 
-  .projects-section {
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-bottom: 100px;
+@media (max-width: 800px) {
+  #welcome-section {
+    height: 360vh;
   }
-
-  .projects-section-header {
-    padding-bottom: 0px;
-    border-bottom: 0px;
-  }
-
 }

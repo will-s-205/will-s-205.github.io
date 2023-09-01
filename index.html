@@ -20,52 +20,71 @@
   </nav>
 
   <section id="welcome-section">
-    <h1>William Step</h1>
-    <p>software engineer</p>
+    <div class="intro">
+      <h2>ABOUT ME</h2>
+      <h1>William Step</h1>
+      <p class="job-title">SOFTWARE ENGINEER</p>
+      <div class="about-me-container">
+        <h2 class="about-me">Who I am?</h2>
+        <p class="about-me">Hi, I'm William, a software engineer from California. One day I decided to switch career
+          from being a
+          Software Quality Assurance Engineer. What I didn't know back then is that in the process of learning to code I
+          would soon discover a true passion.</p>
+        <h2 class="about-me">What do I do?</h2>
+        <p class="about-me">I have experience developing web applications, building websites and actively contributing
+          to
+          Open Source projects. My world revolves around React - that's the technology I know best and work daily with.
+          Also have experience with Java, Python, SQL, NoSQL, Git.
+        </p>
+        <h2 class="about-me">How to find me?</h2>
+        <p class="about-me">I'm always open to new opportunities and connections. Feel free to contact me via email or
+          social media.</p>
+        </p>
+      </div>
 
-    <div class="center">
-      <div class="header-icons">
-        <div class="tooltip">
-          <a href="https://www.linkedin.com/in/williamstep/" target="_blank">
-            <img src="./fcc-portfolio/icons/LinkedIn.svg" alt="LinkedIn">
-          </a>
+      <div class="center">
+        <div class="header-icons">
+          <div class="tooltip">
+            <a href="https://www.linkedin.com/in/williamstep/" target="_blank">
+              <img src="./fcc-portfolio/icons/LinkedIn.svg" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+
+        <div class="header-icons">
+          <div class="tooltip">
+            <a href="https://www.instagram.com/williamstep205/" target="_blank">
+              <img src="./fcc-portfolio/icons/Instagram.svg" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <div class="header-icons">
+          <div class="tooltip">
+            <a href="https://www.youtube.com/@CodeExplorer205" target="_blank">
+              <img src="./fcc-portfolio/icons/YouTube.svg" alt="YouTube">
+            </a>
+          </div>
+        </div>
+
+        <div class="header-icons">
+          <div class="tooltip">
+            <a href="https://twitter.com/WilliamStep4" target="_blank">
+              <img src="./fcc-portfolio/icons/Twitter.svg" alt="Twitter">
+            </a>
+          </div>
+        </div>
+
+        <div class="header-icons">
+          <div class="tooltip">
+            <a href="https://github.com/will-s-205" target="_blank">
+              <img src="./fcc-portfolio/icons/GitHub.svg" alt="GitHub">
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="header-icons">
-        <div class="tooltip">
-          <a href="https://www.instagram.com/williamstep205/" target="_blank">
-            <img src="./fcc-portfolio/icons/Instagram.svg" alt="Instagram">
-          </a>
-        </div>
-      </div>
-
-      <div class="header-icons">
-        <div class="tooltip">
-          <a href="https://www.youtube.com/@CodeExplorer205" target="_blank">
-            <img src="./fcc-portfolio/icons/YouTube.svg" alt="YouTube">
-          </a>
-        </div>
-      </div>
-
-      <div class="header-icons">
-        <div class="tooltip">
-          <a href="https://twitter.com/WilliamStep4" target="_blank">
-            <img src="./fcc-portfolio/icons/Twitter.svg" alt="Twitter">
-          </a>
-        </div>
-      </div>
-
-      <div class="header-icons">
-        <div class="tooltip">
-          <a href="https://github.com/will-s-205" target="_blank">
-            <img src="./fcc-portfolio/icons/GitHub.svg" alt="GitHub">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <image class="my-picture" src="./fcc-portfolio/img/For work.jpg" alt="my photo" />
+      <image class="my-picture" src="./fcc-portfolio/img/For work.jpg" alt="my photo" />
   </section>
 
   <!-- <section id="projects" class="projects-section">
@@ -83,10 +102,53 @@
     </div>
 
   </section> -->
+  </div>
+
+  <section id="projects" class="projects-section">
+    <h2 class="projects-section-header">Major project</h2>
+
+    <div class="project-tile">
+      <p class="project-btn">RANDOM QUOTE MACHINE</p>
+      <p class="project-btn">Quote Machine fetches random, meaningful quotes and authors. Every
+        new quote changes the theme. Quotes can be tweeted<br>Stack used for project: React, JavaScript, Fetch API</p>
+      <br>
+      <a href="https://will-s-205.github.io/random-quote-machine/" target="_blank" class="project">
+        <image class="major-project-image" src="./fcc-portfolio/img/2023-06-20 Random Quote Machine cover.jpg"
+          alt="random quote machine" />
+      </a>
+    </div>
+
+  </section>
 
   <section id="projects" class="projects-section">
     <h2 class="projects-section-header">All projects</h2>
     <div class="projects-grid">
+
+      <div class="project-tile">
+        <a href="https://will-s-205.github.io/meme-generator" target="_blank" class="project">
+          <div class="icons">
+            <div class="tooltip">
+              <span class="tooltiptext">Meme Generator fetches popular memes, adds phrases and downloads edited images
+                to the local</span>
+              <img src="./fcc-portfolio/icons/info.svg" alt="Information">
+            </div>
+
+            <div class="tooltip">
+              <span class="tooltiptext">React</span>
+              <img src="./fcc-portfolio/icons/React.svg" alt="React">
+            </div>
+
+            <div class="tooltip">
+              <span class="tooltiptext">JavaScript</span>
+              <img src="./fcc-portfolio/icons/JavaScript.svg" alt="JavaScript">
+            </div>
+
+          </div>
+          <img class="project-image" src="./fcc-portfolio/img/2023-06-22 Meme Generator.jpg"
+            alt="meme generator image" />
+          <p class="project-btn">Meme Generator</p>
+        </a>
+      </div>
 
       <div class="project-tile">
         <a href="https://mini-recruiter.rigo205.repl.co/" target="_blank" class="project">
@@ -152,33 +214,7 @@
         </a>
       </div>
 
-      <div class="project-tile">
-        <a href="https://will-s-205.github.io/meme-generator" target="_blank" class="project">
-          <div class="icons">
-            <div class="tooltip">
-              <span class="tooltiptext">Meme Generator fetches popular memes, adds phrases and downloads edited images
-                to the local</span>
-              <img src="./fcc-portfolio/icons/info.svg" alt="Information">
-            </div>
-
-            <div class="tooltip">
-              <span class="tooltiptext">React</span>
-              <img src="./fcc-portfolio/icons/React.svg" alt="React">
-            </div>
-
-            <div class="tooltip">
-              <span class="tooltiptext">JavaScript</span>
-              <img src="./fcc-portfolio/icons/JavaScript.svg" alt="JavaScript">
-            </div>
-
-          </div>
-          <img class="project-image" src="./fcc-portfolio/img/2023-06-22 Meme Generator.jpg"
-            alt="meme generator image" />
-          <p class="project-btn">Meme Generator</p>
-        </a>
-      </div>
-
-      <div class="project-tile">
+      <!-- <div class="project-tile">
         <a href="https://will-s-205.github.io/random-quote-machine/" target="_blank" class="project">
           <div class="icons">
 
@@ -203,7 +239,7 @@
             alt="random quote machine image" />
           <p class="project-btn">Random Quote Machine</p>
         </a>
-      </div>
+      </div> -->
 
       <div class="project-tile">
         <a href="https://login.rigo205.repl.co/" target="_blank" class="project">
@@ -320,7 +356,7 @@
         </a>
       </div>
 
-      <div class="project-tile">
+      <!-- <div class="project-tile">
         <a href="https://williamstep.com/airbnb-clone/" target="_blank" class="project">
           <div class="icons">
 
@@ -343,7 +379,7 @@
           <img class="project-image" src="./fcc-portfolio/img/2023-06-22 Airbnb clone.jpg" alt="airbnb clone image" />
           <p class="project-btn">Airbnb Clone</p>
         </a>
-      </div>
+      </div> -->
 
       <div class="project-tile">
         <a href="https://will-s-205.github.io/coffee-ordering-app/" target="_blank" class="project">
@@ -510,7 +546,7 @@
           <p class="project-btn">URL Shortener Microservice</p>
         </a>
       </div>
-
+      <!-- 
       <div class="project-tile">
         <a href="https://fcc-boilerplate-project-headerparser.rigo205.repl.co/" target="_blank" class="project">
           <div class="icons">
@@ -564,7 +600,7 @@
           <p class="project-btn">Timestamp Microservice</p>
         </a>
       </div>
-
+  -->
       <div class="project-tile">
         <a href="https://will-s-205.github.io/fcc-product-landing-pageo-ocean-safari/" target="_blank" class="project">
           <div class="icons">
@@ -589,7 +625,7 @@
           <p class="project-btn">Product Landing Page</p>
         </a>
       </div>
-<!-- 
+      <!-- 
       <div class="project-tile">
         <a href="https://will-s-205.github.io/fcc-survey-form-tell-us-about-yourself/" target="_blank" class="project">
           <div class="icons">
@@ -677,6 +713,10 @@
   </section>
 
   <section id="contact">
+    <div class="about-me-container">
+    <a href="https://github.com/will-s-205" target="_blank">
+      <img src="https://media.giphy.com/media/OGGwlV1RYgX2U/giphy.gif" alt="our world img" />
+    </a>
     <div>
       <h2>Let's get in touch</h2>
     </div>
@@ -693,6 +733,7 @@
         <a id="profile-link" href="https://github.com/will-s-205" target="_blank">
           <i class="fab fa-github"></i> GitHub</a>
       </div>
+    </div>
     </div>
   </section>
   <!--  FCC Tests  -->
