@@ -36,7 +36,7 @@ ul {
 
 h1 {
   font-size: 3.5rem;
-  color: #fff;
+  color: #eee;
   letter-spacing: 1.1rem;
   text-transform: uppercase;
   text-shadow: 0 3px 8px #000;
@@ -45,16 +45,14 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  color: #fff;
+  color: #eee;
   text-transform: uppercase;
-  font-weight: 350;
-  text-shadow: 0 0 25px #000;
+  text-shadow: 0 0 10px #000;
   text-align: center;
 }
 
 p {
   font-size: 1.4rem;
-  color: #008aff;
   font-weight: bold;
   text-align: center;
 }
@@ -86,13 +84,22 @@ a {
 .intro {
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
+}
+
+.my-picture {
+  display: flex;
+  width: 313px;
+  object-fit: cover;
+  border: 1mm solid rgb(221, 221, 221);
+  border-radius: 15px;
+  margin: 10px auto;
+  box-shadow: 10px 10px 25px 10px #808080;
 }
 
 .job-title {
   margin-top: 5px;
   color: #fff;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.215rem;
   text-shadow: 0 0 10px #000;
 }
 
@@ -100,8 +107,8 @@ a {
   max-width: 830px;
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
-  border: 3px solid #c0c0c0;
+  margin: 15px auto;
+  border: 0.2rem solid #c0c0c0;
   padding: 30px;
   background: #45567d;
   border-radius: 10px;
@@ -126,6 +133,8 @@ a {
 .contacts {
   display: flex;
   font-size: 1.2rem;
+  /* text-align: center; */
+  margin: 0 auto;
 }
 
 .contact-details {
@@ -141,7 +150,7 @@ a {
 }
 
 #projects {
-  padding-top: 150px;
+  padding-top: 55px;
   background-color: #45567d;
   /* background-image: url(../img/react-icon-large.png);
   background-repeat: no-repeat;
@@ -200,14 +209,8 @@ a {
   box-shadow: 0 0px 15px #c0c0c0;
 }
 
-.my-picture {
-  display: flex;
-  width: 310px;
-  object-fit: cover;
-  border: 1mm solid rgb(221, 221, 221);
-  border-radius: 15px;
-  margin: 65px auto;
-  box-shadow: 10px 10px 25px 10px #808080;
+.all-projects {
+  border-bottom: 0.2rem solid #eee;
 }
 
 .project-btn {
@@ -218,7 +221,7 @@ a {
 
 .center {
   display: flex;
-  margin: 30px auto -60px;
+  margin: 10px auto;
 }
 
 .header-icons {
