@@ -158,6 +158,14 @@ a {
   background-size: 500px; */
 }
 
+.project-header{
+  font-size: 26px;
+}
+
+.project-description{
+  font-weight: 500;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
